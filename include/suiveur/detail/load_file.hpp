@@ -9,8 +9,8 @@
 namespace suiveur {
     namespace fs = std::filesystem;
 
-    static std::string narrow(const char* str);
-    static std::string narrow(const wchar_t* str);
+    std::string narrow(const char* str);
+    std::string narrow(const wchar_t* str);
 
     struct failed_opening : std::exception {
         [[nodiscard]] const char* what() const noexcept override { return local.c_str(); }
